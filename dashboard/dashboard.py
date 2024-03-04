@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-merge_df = pd.read_csv("all_data.csv")
+dir = 'dashboard'
+merge_df = pd.read_csv(os.path.join(dir, "all_data.csv"))
 
 # Sidebar
 st.sidebar.title("Bike Rental Dashboard")
